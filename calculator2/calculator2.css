@@ -56,7 +56,7 @@ border-radius: 10px;
 }
 
 .bnt-grid{
-padding: 10px 8px;
+    padding: 10px 8px;
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(4, 1fr);
