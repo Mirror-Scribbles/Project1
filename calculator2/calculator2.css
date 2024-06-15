@@ -46,18 +46,19 @@ button:hover{
     
 }
 .screen{
-padding-top: 50px;
+padding: 20px;
 width: 100%;
+font-size: 70px;
 height: 80px;
 font-weight: 600;
 font-family: monospace;
-padding: 10px;
+padding: 13px;
 text-align: right;
 color: aliceblue;
 font-size: 20px;
 /* border: red solid 1px; */
 background-color: rgb(101, 27, 119);
-margin-bottom: 10px;
+margin-bottom: 20px;
 border-radius: 10px;
 }
 
@@ -73,16 +74,16 @@ color:rgb(132, 46, 230) ;
 .operator.C{
 color: red;
 }
-.display1{
+.display1.div1{
 font-size: 1rem;
+
 }
 
-.display2{
-    margin: solid rgb(145, 35, 35) 1px;
-    font-size: 1.5rem;
-    bottom: 0;
+.display2.div2{
+    margin: solid 1px #c2dab8 ;
+    font-size: 30px;
+    /* background-color: #eea73d; */
 }
-
 .equal.operator{
     background-color: rgb(179, 115, 20);
     transition: background-color  0.1s ease-in-out;
