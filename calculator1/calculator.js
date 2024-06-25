@@ -49,6 +49,7 @@ if(btn.id == 'de'){
     }
     return
 }
+
 if(btn.id === '='){
 try {
     $display.value = eval($display.value);
