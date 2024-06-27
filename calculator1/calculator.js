@@ -26,7 +26,6 @@
 
 
 
-
 // part two
 
 const $display = document.querySelector('.display')
@@ -41,6 +40,7 @@ if(btn.id == 'ac'){
     $display.value = '0';
     return
 };
+
 if(btn.id == 'de'){
     if($display.value.length === 1 || $display.value === 'Error!' ) {
         $display.value = '0';
@@ -48,7 +48,9 @@ if(btn.id == 'de'){
         $display.value = $display.value.slice(0, -1);
     }
     return
-}
+};
+
+
 
 if(btn.id === '='){
 try {
@@ -59,7 +61,9 @@ return;
     $display.value = 'Error!';
     return
 }
-}
+};
+
+
 
 if($display.value === '0' || $display.value === 'Error!'){
     $display.value  =  clickedButton;

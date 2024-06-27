@@ -1,62 +1,57 @@
+
+
 const $display1 = document.querySelector('.display1'), $display2 = document.querySelector('.display2');
 
 const $buttons = document.querySelectorAll('button');
 console.log($buttons);
 
-const arrayFromButtons = Array.from($buttons)
-
-arrayFromButtons.forEach((btnArray) =>{
-btnArray.addEventListener( 'click', ()=>{
-
-    console.log(btnArray.textContent)
-
-    let PressedButton = btnArray.textContent;
+const arrayFromButtons = Array.from($buttons);
 
 
-    if(PressedButton === 'C'){
-        $display2.textContent = '0';
-        return 
-    }
+arrayFromButtons.forEach((btn) =>{
+    btn.addEventListener('click', () => {
 
+console.log(btn.textContent)
 
+let button = btn.textContent;
 
-    if(btnArray.id === '='){
-        try {
-            $display2.textContent = eval($display2.textContent);
-            return
-        
-        } catch (error) {
-
-            $display2.textContent = '!Error'
-
-            return
-        }
-        
-        }
-
-
-
-    if(btnArray.id === 'de'){
-
-        if($display2.textContent.length === 1 || $display2.textContent == '!Error'){
-            $display2.textContent = '0';
-            
-        }else{
-            $display2.textContent = $display2.textContent.slice(0, -1);
-        }
-
-        return
-    }
-
-
-
-
-if ($display2.textContent === '0' || $display2.textContent === '!Error'){
-    $display2.textContent = PressedButton;
-}else{
-    $display2.textContent += PressedButton; 
+if(btn.id === 'C'){
+    $display2.textContent = 0;
+    return
 }
 
 
-})
+if(btn.id === '='){
+    try {
+        $display2.textContent = eval($display2.textContent);
+    } catch (error) {
+        $display2.textContent = 'operating error!'
+    }
+
+return 
+}
+
+
+
+
+if(btn.id === 'de'){
+
+    if($display2.textContent.length === 1 || $display2.textContent === 'operating error!'){
+        $display2.textContent = 0;
+    }else{
+        $display2.textContent = $display2.textContent.slice(0, -1);
+    }
+    return
+
+}
+
+
+
+if(btn === '0' || $display2.textContent === 'operating error!' ){
+$display2.textContent = button;
+}else{
+    $display2.textContent += button;
+}
+
+    })
 })
