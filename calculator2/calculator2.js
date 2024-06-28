@@ -7,13 +7,15 @@ console.log($buttons);
 
 const arrayFromButtons = Array.from($buttons);
 
+console.log(arrayFromButtons);
+
 
 arrayFromButtons.forEach((btn) =>{
     btn.addEventListener('click', () => {
 
 console.log(btn.textContent)
 
-let button = btn.textContent;
+let buttons = btn.textContent;
 
 if(btn.id === 'C'){
     $display2.textContent = 0;
@@ -22,13 +24,24 @@ if(btn.id === 'C'){
 
 
 if(btn.id === '='){
-    try {
-        $display2.textContent = eval($display2.textContent);
-    } catch (error) {
-        $display2.textContent = 'operating error!'
+    try
+    
+    {
+
+        $display2.textContent = eval($display2.textContent)
+
+    } 
+    catch
+    
+    (error) 
+    
+    {
+
+        $display2.textContent = '!Error!';
     }
 
-return 
+return
+
 }
 
 
@@ -36,9 +49,15 @@ return
 
 if(btn.id === 'de'){
 
-    if($display2.textContent.length === 1 || $display2.textContent === 'operating error!'){
+    if($display2.textContent.length === 1 || $display2.textContent === '!Error!')
+        
+    {
         $display2.textContent = 0;
-    }else{
+    }
+    
+    else
+    
+    {
         $display2.textContent = $display2.textContent.slice(0, -1);
     }
     return
@@ -47,10 +66,16 @@ if(btn.id === 'de'){
 
 
 
-if(btn === '0' || $display2.textContent === 'operating error!' ){
-$display2.textContent = button;
-}else{
-    $display2.textContent += button;
+if($display2.textContent === '0' || $display2.textContent === '!Error!' )
+
+    {
+        $display2.textContent = buttons;
+    }
+
+else
+
+{
+    $display2.textContent += buttons;
 }
 
     })
