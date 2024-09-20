@@ -1,38 +1,42 @@
 
-// const $inputForm = document.querySelector('.input-form'), 
-// $buttonInput = document.querySelector('.button-form'),
-// $ulList = document.querySelector('.ul-list'),
-// $form = document.querySelector('.div-form');
+const D = document;
 
-// const D = document;
+D.addEventListener('loaded', () =>{ 
+const $Form  = document.querySelector('.form-div');
+const $taskInput = document.querySelector('.input-todo');
+const $listItems = document.querySelector('.todo-list');
 
 
-// D.addEventListener("DOMContentLoaded", ()=>{
 
-//     $form.addEventListener('submit', (e) => {
-//         e.preventDefault();
+$Form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-// const NewTask = () =>{
+    $taskInput.addEventListener('submit', () =>{
+    e.preventDefault();
+    })
 
-//     if($inputForm.value.length == 0){
-//         return;
-//     };
-//     const inputContent =  $inputForm.value;
+    const task = $taskInput.value;
 
-//     const newLi = document.createElement('li');
-//     newLi.classList.add('newStileLi');
+    if (!task) {
 
-//     newLi.textContent = inputContent.toLowerCase();
+return; 
 
-//     $ulList.appendChild(newLi);
+    }
 
-//     $inputForm.value = ''
-// }
-// NewTask();
-//     });
-// });
+console.log($taskInput.value)
 
 
 
 
+const liElement = document.createElement('li')
+        liElement.classList('todo-li')
+        liElement = input.value;
 
+        $listItems.appendChild(liElement);
+
+
+})
+
+
+
+});
