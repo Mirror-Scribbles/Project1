@@ -10,3 +10,7 @@ width: 100%;
 background-image: url(img/cyberpunk-car-urban-scenery.webp);
 background-repeat: no-repeat;
 }
+
+body{
+          background-color: red;
+}
